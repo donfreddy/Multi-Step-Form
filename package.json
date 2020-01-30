@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.14",
     "angular-cc-library": "^1.2.5",
     "angular-credit-cards": "^3.1.8",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "ng-cc-library": "^1.2.5",
     "ngx-credit-cards": "^1.0.9",
     "rxjs": "~6.4.0",
