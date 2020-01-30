@@ -1,0 +1,58 @@
+<div class="tab-pane fade in active">
+  <h3 class="head text-center">{{title}}</h3>
+  <h4 class="text-center">
+    Made with <i class="fa fa-heart heart" style="color:#f48260;"></i> by <span  style="color:#f48260;">Don Freddy</span>. 
+  </h4>
+  <p class="narrow text-center">
+    here is the info you entered previously:
+  </p>
+  <div class='row'>
+    <div class='col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-8 col-md-offset-4 col-md-8'>
+      <div class="row">
+        <div class='col-xs-3 col-sm-2'>
+          <div class="form-group">
+            <label class="control-label" for="name">Name: </label>
+          </div>
+        </div>
+        <div class='col-xs-9 col-sm-10'>
+          {{formData.firstName + ' ' + formData.lastName}}
+        </div>
+      </div>
+      <div class="row">
+        <div class='col-xs-3 col-sm-2'>
+          <div class="form-group">
+            <label class="control-label" for="email">Email: </label>
+          </div>
+        </div>
+        <div class='col-xs-9 col-sm-10'>
+          {{formData.email}}
+        </div>
+      </div>
+      <div class="row">
+        <div class='col-xs-3 col-sm-3'>
+          <div class="form-group">
+            <label class="control-label" for="work">Card No: </label>
+          </div>
+        </div>
+        <div class='col-xs-9 col-sm-12'>
+          {{formData.cardNber}}
+        </div>
+      </div>
+      <div class="row">
+        <div class='col-xs-3 col-sm-2'>
+          <div class="form-group">
+            <label class="control-label" for="cardInfo">Expiration: </label>
+          </div>
+        </div>
+        <div class='col-xs-9 col-sm-10'>
+          {{formData.expDate}} | {{formData.cvc}}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-success btn-outline-rounded" [disabled]="!isFormValid" (click)="submit()"> Submit <span
+        style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+  </div>
+</div>

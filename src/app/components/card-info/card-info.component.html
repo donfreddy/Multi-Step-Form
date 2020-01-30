@@ -1,0 +1,37 @@
+<form #cardInfoForm="ngForm" class="editForm" novalidate>
+  <div class="tab-pane fade in active">
+      <h4 class="head text-center">{{title}}</h4>
+      <br/>
+      <div class='row'>
+          <div class='col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10'>
+              <div class="form-group">
+                  <label class="control-label" for="cardNber">CARD NUMBER</label>  
+                  <input class="form-control input-md" #cardNber="ngModel" required id="cardNber" name="cardNber" type="tel" autocomplete="cc-number" placeholder="Valid Card Number" [(ngModel)]="cardInfo.cardNber" ccNumber>
+                  <div class="alert alert-danger" [hidden]="cardNber.valid">Card number is required</div>
+              </div>   
+              <div class="row">
+                  <div class='col-xs-12 col-sm-4'>
+                      <div class="form-group">
+                          <label class="control-label" for="date">EXPIRY DATE</label>  
+                          <input class="form-control input-md" #expDate="ngModel" required id="expDate" name="expDate" type="tel" autocomplete="cc-exp" ccExp [(ngModel)]="cardInfo.expDate" placeholder="MM/YYYY" validateEx>
+                          <div class="alert alert-danger" [hidden]="expDate.valid">Date is required</div>
+                      </div>
+                  </div>
+                  <div class='col-xs-offset-1 col-xs-7 col-sm-offset-1 col-sm-3'>
+                      <div class="form-group">
+                          <label class="control-label" for="cvc">CV CODE</label>  
+                          <input class="form-control input-md" #cvc="ngModel" required id="cvc" name="cvc" type="tel" placeholder="Ex: 021" [(ngModel)]="cardInfo.cvc" maxlength="3">
+                          <div class="alert alert-danger" [hidden]="cvc.valid">CVC is required</div>
+                      </div>  
+                  </div> 
+              </div>
+          </div>
+
+          <div class="form-group text-center">
+              <button class="btn btn-outline-rounded btn-default" (click)="goToPrevious(cardInfoForm)"> <span style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous</button>
+              <button class="btn btn-outline-rounded btn-info" [disabled]="!cardInfoForm.valid" (click)="goToNext(cardInfoForm)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+          </div>
+      </div>
+  
+  </div>
+</form>

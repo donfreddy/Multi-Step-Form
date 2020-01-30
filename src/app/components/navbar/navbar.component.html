@@ -1,0 +1,34 @@
+<div class="board-inner" id="status-buttons">
+  <ul class="nav nav-tabs" id="myTab">
+      <div class="liner"></div>
+                  
+      <li>
+          <a routerLink="/personal" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" data-toggle="tab" title="personal">
+              <span class="round-tabs one">
+                  <i class="glyphicon glyphicon-user"></i>
+              </span>
+          </a>
+      </li>
+
+       <li>
+          <a routerLink="/card-info" routerLinkActive="active" data-toggle="tab" title="card">
+              <span class="round-tabs two">
+                  <i class="glyphicon glyphicon-credit-card"></i>
+              </span> 
+          </a>
+      </li>
+      
+      <li>
+          <a routerLink="/result" routerLinkActive="active" data-toggle="tab" title="completed">
+              <span class="round-tabs three">
+                  <i class="glyphicon glyphicon-ok"></i>
+              </span>
+          </a>
+      </li>
+              
+  </ul>
+  <div class="clearfix"></div>
+</div>
+
+<!-- Close the Splash screen -->
+<script src="assets/js/loading-bars.js"></script>
